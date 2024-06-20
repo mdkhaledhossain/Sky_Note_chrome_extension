@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sky Note</title>
+  <link rel="stylesheet" href="extension.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <script src="lib/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+    <div id="intro">
+        <img src="skynote.png" style="height: 220px; width: 240px; border-radius: 80px; margin-top: 80px;" alt="Logo missing">
+        <br>
+        Welcome to, SKY NOTE <br><br>
+        <br><i class="fa fa-file-text" style="font-size:36px;"></i>
+    </div>
+    
+  <main>
+    <section class="glass">
+        <div class="notes__sidebar">
+            <button class="add_new-button" type="button">Home</button>
+            
+            <input type="text" placeholder="Find your notes" id="search_Input">
+            <button class="s_icon"><i class="fa fa-search"></i></button>
+            <br><br>
+            <div class="notes__list">
+                <div class="notes__list-item notes__list-item--selected">
+                    <div class="notes__small-title"></div> 
+                    <div class="notes__small-body"></div>
+                    <div class="notes__small-updated"></div>
+                </div>
+            </div> 
+        </div>
+
+        <div class="notes__preview">
+            <div class="headlilne"><h3> <marquee behavior="" direction="left">Welcome to Sky Note</marquee></h3></div>
+            <p class="notes__title">
+                <strong>Title:</strong> 
+                <input type="text" id="titleInput">
+            </p><br><hr>
+            <p class="notes_url">
+                <p class="notes_url_next">URL: <input type="text" id="urlInput"></p> 
+            </p>
+            <textarea class="notes__body" rows="12" placeholder="I am the notes body..."></textarea>
+            <button class="save-button" role="button">Save</button>
+        </div>
+
+        <div class="notes__full-view" style="display: none;">
+            <div class="notes__full-view-title"></div><br><hr>
+            <div class="notes__full-view-date"></div><br>
+            <div class="notes__full-view-body"></div><br>
+
+            <button class="url-button" role="button">Visit Page</button>
+            <button class="delete-button" role="button">Delete</button>
+            <button class="download-pdf-button" role="button">Download PDF</button>
+        </div>
+    </section>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

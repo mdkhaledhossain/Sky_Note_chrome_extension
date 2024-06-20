@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Sky Note",
+  "version": "1.0.0",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SKY NOTE"
+  },
+
+  "icons": {
+    "128": "All_icon/icon128.png",
+    "48": "All_icon/icon48.png",
+    "32": "All_icon/icon32.png",
+    "16": "All_icon/icon16.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
